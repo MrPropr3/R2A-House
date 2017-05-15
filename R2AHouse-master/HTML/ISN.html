@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    	<meta charset="utf-8" /> 
+    	<link rel="shortcut icon" href="Images/3.ico" />
+        <title>R2A House</title>
+        <link rel="stylesheet" type="text/css" href="Css.css">
+        <link rel="icon" href="LOGODOS.png" type="Image/png" />
+        <style> 
+                #promptCompat{ 
+                        display: none; 
+                } 
+                #promptCompat.no_dialog{ 
+                        box-shadow: 0 0 5px 2px red; 
+                        padding: 10px; 
+                        display: block; 
+                        text-align: center; 
+                        font-weight: bold; 
+                } 
+                .boutons{ 
+                        padding: 10px; 
+                } 
+                dialog{ 
+                        border-radius: 10px; 
+                        box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3); 
+                } 
+                dialog::backdrop{ 
+                        background-color: rgba(0, 0, 0, 0.6); 
+                } 
+        </style>
+    </head>
+
+    <body id="Page_A">
+	    <div id="bloc-page">
+			<div id="entete">
+				<header>					
+					<a class="left" href="ISN.html"><img src="LOGODOS.png" width="150" height="150"></a>
+					<div class="center"><h2>Music that deserves to be shared</h2></div>
+					<div class="right"><h1><span style="color:#581845;">R</span><span style="color:#741242;">2</span><span style="color:#900c3f;">A</span><span style="color:#c70039;"> </span><span style="color:#e32c36;">H</span><span style="color:#ff5733;">o</span><span style="color:#ffc300;">u</span><span style="color:#f8e100;">s</span><span style="color:#f0ff00;">e</span></h1></div>
+				</header>
+			</div>
+			<div>
+				<nav>
+				<ul>
+				 <li><a class="active" href="Nouveaux.html">Nouveaux</a></li>
+			     <li><a href="Artistes.html">Artistes</a></li>
+			     <li><a href="sous-categorie.html">Sous-cat&eacute;gories</a></li>
+ 				 <li><a href="Nos playlists.html">Nos playlist</a></li>
+ 				 <li><a href="contact.html">Contact</a></li>
+ 				 <li><a href="radio.html">Radio</a></li>
+
+				</ul>
+				</nav>
+			</div>
+			<div class="corp">
+				<div class="leftP">
+					<article>
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/2YllipGl2Is" frameborder="0" allowfullscreen></iframe>
+					</article>
+					<article>
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/Anu5yh403Fs" frameborder="0" allowfullscreen></iframe>
+					</article>
+				</div>
+				<div class="rightP">
+					<article>
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/jpYDw7AJDtM" frameborder="0" allowfullscreen></iframe>
+					</article>
+					<article>
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/9ckLul7gsOU" frameborder="0" allowfullscreen></iframe>
+					</article>
+				</div>
+				<div class="centerP">
+				<h3> PUSH, DISCOVER AND... </h3> 
+				<center><h3> ENJOY ! </h3></center>
+					<p id="promptCompat">Votre navigateur ne pend pas en charge les balises <code><dialog></code></p> 
+					<dialog id="mydialog" close> 
+					Good listening!<br/> 
+	                <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=UUa10nxShhzNrCE1o2ZOPztg" frameborder="0" allowfullscreen></iframe>
+					<div class="boutons"><button onclick="$dialog.close()">Fermer</button>&nbsp;</div> 
+					</dialog> 
+					<div class="boutons"><button onclick="$dialog.showModal()"><img id="play" src="playbouton.png" alt="Play_bouton"></button></div>  
+					<script> 
+	               var $dialog = document.getElementById('mydialog'); 
+		          if(!('show' in $dialog)){ 
+                  document.getElementById('promptCompat').className = 'no_dialog'; 
+	             }
+	             $dialog.addEventListener('close', function() { 
+				console.log('Fermeture. ', this.returnValue); 
+				}); 
+				</script> 
+				</div>
+			</div>
+			<div>
+				<footer></footer>
+			</div>
+		</div>
+    </body>
+</html>
